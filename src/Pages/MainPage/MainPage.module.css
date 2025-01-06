@@ -1,0 +1,14 @@
+.wrapperMainPage {
+  background: url('../../assets/cloud.jpg');
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.wrapperMainPage h1 {
+  text-transform: uppercase;
+  color: #1e1e1e;
+  margin-bottom: 30px;
+  text-align: center;
+}

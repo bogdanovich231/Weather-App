@@ -1,0 +1,29 @@
+.containerSearchBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 20px;
+  background-color: #9abaf2d7;
+}
+
+.inputSearch {
+  border: none;
+  outline: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  font-size: 20px;
+}
+
+.inputSearch::placeholder {
+  font-size: 20px;
+  font-family: 'Poppins', serif;
+  color: #ffff;
+}
+
+.wrapperSearchBar input[type] {
+  color: #ffff;
+}
