@@ -21,6 +21,7 @@ function SearchBar() {
     const query = e.target.value;
     setSearchTerm(query);
     dispatch(setCity(query));
+    dispatch(setCity(query));
   };
 
   const handleCitySelect = (cityName: string) => {
