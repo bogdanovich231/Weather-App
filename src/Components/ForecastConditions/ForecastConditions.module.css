@@ -14,5 +14,8 @@
 .wrrapperForecastConditions ul li {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 20px;
+}
+.wrrapperForecastConditions ul li img {
+  width: 30px;
 }

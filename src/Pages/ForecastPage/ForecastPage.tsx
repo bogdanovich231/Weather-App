@@ -4,7 +4,6 @@ import SearchBar from '../../Components/SearchBar/SearchBar';
 import SidebarMenu from '../../Components/SidebarMenu/SidebarMenu';
 import WeatherOverview from '../../Components/WeatherOverview/WeatherOverview';
 import styles from './ForecastPage.module.css';
-
 import { useParams } from 'react-router-dom';
 
 function ForecastPage() {
@@ -19,7 +18,7 @@ function ForecastPage() {
         <SearchBar />
         <WeatherOverview city={cityName} />
         <ForecastToday city={cityName} />
-        <ForecastConditions />
+        <ForecastConditions city={cityName} />
       </div>
     </div>
   );
