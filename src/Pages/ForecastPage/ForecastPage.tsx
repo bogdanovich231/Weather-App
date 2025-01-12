@@ -1,3 +1,4 @@
+import ForecastToday from '../../Components/ForecastToday/ForecastToday';
 import SearchBar from '../../Components/SearchBar/SearchBar';
 import SidebarMenu from '../../Components/SidebarMenu/SidebarMenu';
 import WeatherOverview from '../../Components/WeatherOverview/WeatherOverview';
@@ -16,6 +17,7 @@ function ForecastPage() {
       <div className={styles.content}>
         <SearchBar />
         <WeatherOverview city={cityName} />
+        <ForecastToday />
       </div>
     </div>
   );
