@@ -12,7 +12,7 @@ function WeatherOverview({ city }: WeatherOverviewProps) {
     return <Loader />;
   }
   const cityName = data?.name;
-  const rainProbability = data?.rain ? data.rain['1h'] : 0;
+  const windSpeed = data?.wind?.speed;
   const temperature = data?.main.temp;
 
   return (
@@ -20,7 +20,7 @@ function WeatherOverview({ city }: WeatherOverviewProps) {
       <div className={styles.wrapperInformationOverview}>
         <div className={styles.informationOverview}>
           <h2>{cityName}</h2>
-          <p>Możliwość opadu deszczu: {rainProbability ? rainProbability + '%' : 'Brak danych'}</p>
+          <p>Prędkość wiatru: {windSpeed !== undefined ? `${windSpeed} m/s` : 'Brak danych'}</p>
         </div>
         <div className={styles.degreeOverview}>
           <h1>{temperature ? `${Math.round(temperature)}°` : 'Brak danych'}</h1>

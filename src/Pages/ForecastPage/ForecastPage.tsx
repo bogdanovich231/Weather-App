@@ -2,11 +2,12 @@ import SearchBar from '../../Components/SearchBar/SearchBar';
 import SidebarMenu from '../../Components/SidebarMenu/SidebarMenu';
 import WeatherOverview from '../../Components/WeatherOverview/WeatherOverview';
 import styles from './ForecastPage.module.css';
-import { RootState } from '../../store/store';
-import { useSelector } from 'react-redux';
+
+import { useParams } from 'react-router-dom';
 
 function ForecastPage() {
-  const { city } = useSelector((state: RootState) => state.search);
+  const { city } = useParams();
+  const cityName = city || 'Wroclaw';
   return (
     <div className={styles.containerForecastPage}>
       <div className={styles.sidebar}>
@@ -14,7 +15,7 @@ function ForecastPage() {
       </div>
       <div className={styles.content}>
         <SearchBar />
-        <WeatherOverview city={city} />
+        <WeatherOverview city={cityName} />
       </div>
     </div>
   );
