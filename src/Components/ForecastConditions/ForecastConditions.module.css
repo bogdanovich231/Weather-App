@@ -1,0 +1,18 @@
+.containerForecastConditions {
+  background-color: #9abaf2;
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 15px;
+}
+.wrrapperForecastConditions ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 40px;
+  margin-top: 30px;
+}
+.wrrapperForecastConditions ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
