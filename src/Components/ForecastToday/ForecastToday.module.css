@@ -20,3 +20,6 @@
 .containerForecastBlock img {
   width: 50px;
 }
+.containerForecastBlock h3 {
+  color: #ffffff;
+}

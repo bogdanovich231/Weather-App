@@ -19,3 +19,7 @@
 .wrrapperForecastConditions ul li img {
   width: 30px;
 }
+.wrrapperForecastConditions ul li h3 {
+  color: #ffffff;
+  margin-top: 5px;
+}
