@@ -13,11 +13,7 @@ function SearchBar() {
 
   const [searchTerm, setSearchTerm] = useState(city);
 
-  const {
-    data: citySuggestions,
-    error: suggestionsError,
-    isLoading: isSuggestionsLoading,
-  } = useGetCityNameQuery(searchTerm, {
+  const { data: citySuggestions } = useGetCityNameQuery(searchTerm, {
     skip: searchTerm.length < 3,
   });
 
@@ -41,17 +37,19 @@ function SearchBar() {
 
   return (
     <div className={styles.containerSearchBar}>
-      <input
-        className={styles.inputSearch}
-        placeholder="Szukaj miasta, aby sprawdzić pogodę"
-        type="text"
-        value={searchTerm}
-        onChange={handleSearch}
-      />
-      <img src={SearchIcon} alt="search" />
-
-      {suggestionsError && <p style={{ color: 'red' }}>Błąd при загрузке предложений городов!</p>}
-
+      <div className={styles.wrapperSearchBar}>
+        <input
+          className={styles.inputSearch}
+          placeholder="Szukaj miasta, aby sprawdzić pogodę"
+          type="text"
+          value={searchTerm}
+          onChange={handleSearch}
+        />
+        <img src={SearchIcon} alt="search" />
+      </div>
+      {searchTerm.length >= 3 && citySuggestions && citySuggestions.list.length === 0 && (
+        <p>Nie znaleziono żadnych miast</p>
+      )}
       {citySuggestions && citySuggestions.list.length > 0 && (
         <ul className={styles.suggestionsList}>
           {citySuggestions.list.map((result: IWeather) => (

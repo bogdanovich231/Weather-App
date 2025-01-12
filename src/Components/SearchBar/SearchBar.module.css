@@ -1,14 +1,33 @@
 .containerSearchBar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 40%;
   border-radius: 10px;
   font-size: 20px;
+}
+.wrapperSearchBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
   padding: 20px;
   background-color: #9abaf2d7;
 }
-
+.wrapperSearchBar img {
+  cursor: pointer;
+}
+.containerSearchBar ul li {
+  list-style: none;
+}
+.containerSearchBar ul {
+  background-color: #d6e2f5d7;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0;
+  margin-top: 10px;
+}
+.containerSearchBar p {
+  font-size: 15px;
+  color: red;
+}
 .inputSearch {
   border: none;
   outline: none;
