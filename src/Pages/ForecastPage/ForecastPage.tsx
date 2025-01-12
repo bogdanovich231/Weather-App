@@ -17,7 +17,7 @@ function ForecastPage() {
       <div className={styles.content}>
         <SearchBar />
         <WeatherOverview city={cityName} />
-        <ForecastToday />
+        <ForecastToday city={cityName} />
       </div>
     </div>
   );
