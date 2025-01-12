@@ -1,0 +1,11 @@
+.containerForecastPage {
+  display: flex;
+}
+.sidebar {
+  position: fixed;
+}
+.content {
+  margin-left: 150px;
+  padding: 20px;
+  width: 100%;
+}

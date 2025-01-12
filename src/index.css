@@ -21,8 +21,22 @@ h2 {
 h3 {
   font-size: 30px;
   margin: 0;
-  color: #7f7f7f;
 }
+h4 {
+  font-size: 20px;
+  margin: 0;
+}
+ul li {
+  list-style: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+
 button {
   border: none;
   background-color: transparent;

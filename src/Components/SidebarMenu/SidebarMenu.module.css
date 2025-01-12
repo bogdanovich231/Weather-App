@@ -1,0 +1,24 @@
+.containerSidebarMenu {
+  width: 50%;
+  height: 90vh;
+  background-color: #9abaf2;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+.containerSidebarMenu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+.containerSidebarMenu li a {
+  color: #ffff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.containerSidebarMenu img {
+  width: 30px;
+}
