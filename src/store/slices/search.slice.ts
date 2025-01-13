@@ -16,18 +16,8 @@ const searchSlice = createSlice({
     setSearchResults: (state, action) => {
       state.searchResults = action.payload;
     },
-    addFavorite: (state, action: { payload: string }) => {
-      if (!state.favorites.includes(action.payload)) {
-        state.favorites.push(action.payload);
-      }
-    },
-    removeFavorite: (state, action: { payload: string }) => {
-      state.favorites = state.favorites.filter(
-        (city) => city !== action.payload
-      );
-    },
   },
 });
 
-export const { setCity, setSearchResults, addFavorite, removeFavorite } = searchSlice.actions;
+export const { setCity, setSearchResults } = searchSlice.actions;
 export default searchSlice.reducer;

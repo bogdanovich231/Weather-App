@@ -1,11 +1,11 @@
 .containerFavoriteCities {
-  background-color: #9abaf2;
-  border-radius: 10px;
-  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   margin-top: 15px;
   cursor: pointer;
 }
-.containerFavoriteCities:hover {
+.wrapperCity:hover {
   background-color: #83a3db;
   transition: 0.2s ease-out;
 }
@@ -14,6 +14,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #9abaf2;
+  border-radius: 10px;
+  padding: 30px;
 }
 .informationCity {
   display: flex;
@@ -25,4 +28,8 @@
 }
 .informationCity h3 {
   color: #ffffff;
+}
+.favoriteButton img {
+  width: 40px;
+  cursor: pointer;
 }
