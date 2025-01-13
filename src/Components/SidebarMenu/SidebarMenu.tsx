@@ -4,12 +4,16 @@ import IconHeart from '../../assets/heartMenu.svg';
 import IconSetting from '../../assets/settingMenu.svg';
 import { Link } from 'react-router-dom';
 
-function SidebarMenu() {
+interface SidebarMenuProps {
+  city: string;
+}
+
+function SidebarMenu({ city }: SidebarMenuProps) {
   return (
     <div className={styles.containerSidebarMenu}>
       <ul>
         <li>
-          <Link to={'/'}>
+          <Link to={`/forecast/${city}`}>
             <img src={IconWeather} alt="icon weather" />
             <h4>Weather</h4>
           </Link>

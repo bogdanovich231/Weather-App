@@ -44,3 +44,14 @@
 .wrapperSearchBar input[type] {
   color: #ffff;
 }
+.suggestionsList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.suggestionsList li img {
+  width: 30px;
+  cursor: pointer;
+}
