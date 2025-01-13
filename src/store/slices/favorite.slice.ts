@@ -3,8 +3,13 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 interface FavoritesState {
   cities: string[];
 }
+const loadFromLocalStorage = (): string[] => {
+  const storedFavorites = localStorage.getItem('favoriteCities');
+  return storedFavorites ? JSON.parse(storedFavorites) : [];
+};
+
 const initialState: FavoritesState = {
-  cities: [],
+  cities: loadFromLocalStorage(),
 };
 
 const favoritesSlice = createSlice({
