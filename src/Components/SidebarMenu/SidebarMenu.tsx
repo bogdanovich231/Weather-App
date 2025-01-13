@@ -19,13 +19,13 @@ function SidebarMenu({ city }: SidebarMenuProps) {
           </Link>
         </li>
         <li>
-          <Link to={'/'}>
+          <Link to={'/favorite-cities'}>
             <img src={IconHeart} alt="icon heart" />
             <h4>Cities</h4>
           </Link>
         </li>
         <li>
-          <Link to={'/'}>
+          <Link to={'/settings'}>
             <img src={IconSetting} alt="icon setting" />
             <h4>Settings</h4>
           </Link>

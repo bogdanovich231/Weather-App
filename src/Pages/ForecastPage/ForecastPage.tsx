@@ -5,11 +5,13 @@ import SearchBar from '../../Components/SearchBar/SearchBar';
 import SidebarMenu from '../../Components/SidebarMenu/SidebarMenu';
 import WeatherOverview from '../../Components/WeatherOverview/WeatherOverview';
 import styles from './ForecastPage.module.css';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 
 function ForecastPage() {
   const { city } = useParams();
   const cityName = city || 'Wroclaw';
+  const location = useLocation();
+
   return (
     <div className={styles.containerForecastPage}>
       <div className={styles.sidebar}>
@@ -17,10 +19,14 @@ function ForecastPage() {
       </div>
       <div className={styles.content}>
         <SearchBar />
-        <WeatherOverview city={cityName} />
-        <ForecastToday city={cityName} />
-        <ForecastConditions city={cityName} />
-        <FavoriteCities />
+        {location.pathname.startsWith('/forecast') && (
+          <>
+            <WeatherOverview city={cityName} />
+            <ForecastToday city={cityName} />
+            <ForecastConditions city={cityName} />
+          </>
+        )}
+        {location.pathname === '/favorite-cities' && <FavoriteCities />}
       </div>
     </div>
   );

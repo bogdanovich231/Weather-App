@@ -2,6 +2,7 @@ import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import MainPage from './Pages/MainPage/MainPage';
 import ForecastPage from './Pages/ForecastPage/ForecastPage';
 
+
 function App() {
   return (
     <>
@@ -9,6 +10,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/forecast/:city" element={<ForecastPage />} />
+          <Route path="/favorite-cities" element={<ForecastPage />} />
         </Routes>
       </Router>
     </>
