@@ -1,3 +1,4 @@
+import FavoriteCities from '../../Components/FavoriteCities/FavoriteCities';
 import ForecastConditions from '../../Components/ForecastConditions/ForecastConditions';
 import ForecastToday from '../../Components/ForecastToday/ForecastToday';
 import SearchBar from '../../Components/SearchBar/SearchBar';
@@ -12,13 +13,14 @@ function ForecastPage() {
   return (
     <div className={styles.containerForecastPage}>
       <div className={styles.sidebar}>
-        <SidebarMenu />
+        <SidebarMenu city={cityName} />
       </div>
       <div className={styles.content}>
         <SearchBar />
         <WeatherOverview city={cityName} />
         <ForecastToday city={cityName} />
         <ForecastConditions city={cityName} />
+        <FavoriteCities />
       </div>
     </div>
   );
