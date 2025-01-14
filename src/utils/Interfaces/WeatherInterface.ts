@@ -5,12 +5,15 @@ export interface IWeather {
     country: string;
   };
 }
-interface ForecastData {
+export interface ForecastData {
   dt: number;
   dt_txt: string;
   main: {
     temp: number;
   };
+  weather: {
+    description: string;
+  }[];
 }
 
 export interface WeatherAPIResponse {

@@ -1,6 +1,7 @@
 import FavoriteCities from '../../Components/FavoriteCities/FavoriteCities';
 import ForecastConditions from '../../Components/ForecastConditions/ForecastConditions';
 import ForecastToday from '../../Components/ForecastToday/ForecastToday';
+import ForecastWeek from '../../Components/ForecastWeek/ForecastWeek';
 import SearchBar from '../../Components/SearchBar/SearchBar';
 import SidebarMenu from '../../Components/SidebarMenu/SidebarMenu';
 import WeatherOverview from '../../Components/WeatherOverview/WeatherOverview';
@@ -26,6 +27,7 @@ function ForecastPage() {
             <ForecastConditions city={cityName} />
           </>
         )}
+        {location.pathname.startsWith('/forecast') && <ForecastWeek />}
         {location.pathname === '/favorite-cities' && <FavoriteCities />}
       </div>
     </div>
