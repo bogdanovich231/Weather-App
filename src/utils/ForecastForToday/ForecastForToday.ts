@@ -12,6 +12,7 @@ export const getHourlyForecastFromNow = (data: WeatherAPIResponse): ForecastBloc
         forecastBlocks.push({
           time: forecastDateTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
           degree: Math.round(forecast.main.temp),
+          description: forecast.weather[0].description,
         });
       }
     });

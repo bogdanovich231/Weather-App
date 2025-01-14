@@ -23,4 +23,5 @@ export interface WeatherAPIResponse {
 export interface ForecastBlock {
   time: string;
   degree: number;
+  description: string;
 }

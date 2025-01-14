@@ -4,6 +4,7 @@ import IconCloud from '../../assets/iconsConditions/cloud.svg';
 import IconWind from '../../assets/iconsConditions/wind.svg';
 import { useGetForecastQuery } from '../../store/api/api';
 import Loader from '../Loader/Loader';
+import { getPrecipitation } from '../../utils/GetPrecip/GetPrecip';
 
 interface ForecastConditionsProps {
   city: string;
@@ -22,6 +23,8 @@ function ForecastConditions({ city }: ForecastConditionsProps) {
   }
 
   const { pop, rain, snow, wind, clouds } = currentForecast;
+  const precip = getPrecipitation(rain, snow);
+  const precipResult = precip ? `${precip.toFixed(1)} mm` : '0 mm';
 
   return (
     <div className={styles.containerForecastConditions}>
@@ -31,7 +34,7 @@ function ForecastConditions({ city }: ForecastConditionsProps) {
           <li>
             <img src={IconRain} alt="condition" />
             <div className={styles.conditionTitle}>
-              <h4>Chance of rain</h4>
+              <h4>Chance of recip</h4>
               <h3>{pop ? Math.round(pop * 100) + '%' : '0%'}</h3>
             </div>
           </li>
@@ -53,7 +56,7 @@ function ForecastConditions({ city }: ForecastConditionsProps) {
             <img src={IconRain} alt="" />
             <div className={styles.conditionTitle}>
               <h4>Precip</h4>
-              <h3>{rain?.['1h'] || snow?.['1h'] ? `${(rain?.['1h'] || snow?.['1h']).toFixed(1)} mm` : '0 mm'}</h3>
+              <h3>{precipResult}</h3>
             </div>
           </li>
         </ul>

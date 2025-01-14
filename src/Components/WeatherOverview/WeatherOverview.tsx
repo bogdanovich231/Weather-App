@@ -15,7 +15,7 @@ function WeatherOverview({ city }: WeatherOverviewProps) {
   const cityName = data?.name;
   const description = data?.weather?.[0]?.description;
   const temperature = data?.main.temp;
-  const weatherIcon = description ? WeatherIcon(description) : 'probelm';
+  const weatherIcon = description ? WeatherIcon(description) : IconSunny;
 
   return (
     <div className={styles.containerWeatherOverview}>
