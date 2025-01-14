@@ -11,7 +11,7 @@
 .wrapperForecastToday {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 60px;
   margin-top: 30px;
 }
 .containerForecastWeekBlock {
@@ -22,20 +22,15 @@
 .containerForecastWeekBlock img {
   width: 60px;
 }
-.containerForecastWeekBlock h3 {
-  width: 55px;
-}
+
 .containerForecastWeekBlock p {
   font-weight: 600;
   font-size: 16px;
-}
-.containerForecastWeekBlock h4 {
-  width: 50px;
 }
 .containerImage {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 148px;
+  flex-direction: column;
   gap: 10px;
 }
