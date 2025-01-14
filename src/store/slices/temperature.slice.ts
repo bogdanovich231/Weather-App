@@ -6,8 +6,10 @@ interface TemperatureState {
   unit: TemperatureUnit;
 }
 
+const savedTemperatureUnit = localStorage.getItem('temperatureUnit') as TemperatureUnit | null;
+
 const initialState: TemperatureState = {
-  unit: 'Celsius',
+  unit: savedTemperatureUnit || 'Celsius',
 };
 
 const temperatureSlice = createSlice({
@@ -16,6 +18,7 @@ const temperatureSlice = createSlice({
   reducers: {
     setTemperatureUnit: (state, action: PayloadAction<TemperatureUnit>) => {
       state.unit = action.payload;
+      localStorage.setItem('temperatureUnit', action.payload);
     },
   },
 });
