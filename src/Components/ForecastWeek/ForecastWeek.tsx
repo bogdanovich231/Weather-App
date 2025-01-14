@@ -5,10 +5,14 @@ import ForecastWeekBlock from './ForecastWeekBlock';
 import Loader from '../Loader/Loader';
 import { ForecastData } from '../../utils/Interfaces/WeatherInterface';
 import WeatherIcon from '../WeatherIcon/WeatherIcon';
+import { RootState } from '../../store/store';
+import { useSelector } from 'react-redux';
+import { convertTemperature } from '../../utils/ConvertTemperature/ConvertTemperature';
 
 function ForecastWeek() {
   const { city } = useParams();
   const { data: forecast, isLoading, error } = useGetForecastQuery(city || '');
+  const temperatureUnit = useSelector((state: RootState) => state.temperature.unit);
 
   if (isLoading) {
     return <Loader />;
@@ -42,7 +46,7 @@ function ForecastWeek() {
             <ForecastWeekBlock
               key={index}
               day={day.dt_txt}
-              degree={Math.round(day.main.temp)}
+              degree={convertTemperature(day.main.temp, temperatureUnit)}
               description={weatherDescription}
               icon={weatherIcon}
             />

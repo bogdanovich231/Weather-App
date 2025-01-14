@@ -3,15 +3,22 @@ import IconSunny from '../../assets/icons/sunny.svg';
 import { useGetWeatherQuery } from '../../store/api/api';
 import Loader from '../Loader/Loader';
 import WeatherIcon from '../WeatherIcon/WeatherIcon';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../store/store';
+import { convertTemperature } from '../../utils/ConvertTemperature/ConvertTemperature';
+
 interface WeatherOverviewProps {
   city: string;
 }
+
 function WeatherOverview({ city }: WeatherOverviewProps) {
   const { data, isLoading } = useGetWeatherQuery(city);
+  const temperatureUnit = useSelector((state: RootState) => state.temperature.unit);
 
   if (isLoading) {
     return <Loader />;
   }
+
   const cityName = data?.name;
   const description = data?.weather?.[0]?.description;
   const temperature = data?.main.temp;
@@ -25,7 +32,7 @@ function WeatherOverview({ city }: WeatherOverviewProps) {
           <p>{description ? description.charAt(0).toUpperCase() + description.slice(1) : 'No data'}</p>
         </div>
         <div className={styles.degreeOverview}>
-          <h1>{temperature ? `${Math.round(temperature)}°` : 'No data'}</h1>
+          <h1>{convertTemperature(temperature, temperatureUnit)}</h1>
         </div>
       </div>
       <div className={styles.iconOverview}>

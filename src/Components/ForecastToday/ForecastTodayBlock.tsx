@@ -2,7 +2,7 @@ import styles from './ForecastToday.module.css';
 
 interface IForecastToday {
   time: string;
-  degree: number;
+  degree: string;
   icon: string;
 }
 

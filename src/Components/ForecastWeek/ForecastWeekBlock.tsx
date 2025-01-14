@@ -2,7 +2,7 @@ import styles from './ForecastWeek.module.css';
 
 interface IForecastWeek {
   day: string;
-  degree: number;
+  degree: string;
   description: string;
   icon: string;
 }
@@ -17,7 +17,7 @@ function ForecastWeekBlock({ day, degree, description, icon }: IForecastWeek) {
         <img src={icon} alt="cloudy" />
         <p>{description}</p>
       </div>
-      <h3>{degree}°</h3>
+      <h3>{degree}</h3>
     </div>
   );
 }
