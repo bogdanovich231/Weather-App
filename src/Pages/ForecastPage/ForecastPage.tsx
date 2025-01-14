@@ -3,6 +3,7 @@ import ForecastConditions from '../../Components/ForecastConditions/ForecastCond
 import ForecastToday from '../../Components/ForecastToday/ForecastToday';
 import ForecastWeek from '../../Components/ForecastWeek/ForecastWeek';
 import SearchBar from '../../Components/SearchBar/SearchBar';
+import SettingsConditions from '../../Components/SettingsConditions/SettingsConditions';
 import SidebarMenu from '../../Components/SidebarMenu/SidebarMenu';
 import WeatherOverview from '../../Components/WeatherOverview/WeatherOverview';
 import styles from './ForecastPage.module.css';
@@ -29,6 +30,7 @@ function ForecastPage() {
         )}
         {location.pathname.startsWith('/forecast') && <ForecastWeek />}
         {location.pathname === '/favorite-cities' && <FavoriteCities />}
+        {location.pathname === '/settings' && <SettingsConditions />}
       </div>
     </div>
   );
