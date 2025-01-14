@@ -2,6 +2,7 @@ import styles from './WeatherOverview.module.css';
 import IconSunny from '../../assets/icons/sunny.svg';
 import { useGetWeatherQuery } from '../../store/api/api';
 import Loader from '../Loader/Loader';
+import WeatherIcon from '../WeatherIcon/WeatherIcon';
 interface WeatherOverviewProps {
   city: string;
 }
@@ -12,22 +13,23 @@ function WeatherOverview({ city }: WeatherOverviewProps) {
     return <Loader />;
   }
   const cityName = data?.name;
-  const windSpeed = data?.wind?.speed;
+  const description = data?.weather?.[0]?.description;
   const temperature = data?.main.temp;
+  const weatherIcon = description ? WeatherIcon(description) : 'probelm';
 
   return (
     <div className={styles.containerWeatherOverview}>
       <div className={styles.wrapperInformationOverview}>
         <div className={styles.informationOverview}>
           <h2>{cityName}</h2>
-          <p>Prędkość wiatru: {windSpeed !== undefined ? `${windSpeed} m/s` : 'Brak danych'}</p>
+          <p>{description ? description.charAt(0).toUpperCase() + description.slice(1) : 'No data'}</p>
         </div>
         <div className={styles.degreeOverview}>
-          <h1>{temperature ? `${Math.round(temperature)}°` : 'Brak danych'}</h1>
+          <h1>{temperature ? `${Math.round(temperature)}°` : 'No data'}</h1>
         </div>
       </div>
       <div className={styles.iconOverview}>
-        <img src={IconSunny} alt="weather degree" />
+        <img src={weatherIcon} alt="weather icon" />
       </div>
     </div>
   );
