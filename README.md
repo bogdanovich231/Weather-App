@@ -13,10 +13,12 @@ Weather Application was created as part of an educational project during a cours
  + Redux Toolkit
  + OpenWeatherApi
 
+### Demo
+[Forecast Weather](https://weather-forecast-appl.netlify.app/)
 
 ### Project Installation
 
-#### Frontend (React Native)
+#### Frontend
 
 1.  Install the necessary dependencies using the command:
     `npm install`
