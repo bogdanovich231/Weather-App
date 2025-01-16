@@ -13,6 +13,8 @@ Weather Application was created as part of an educational project during a cours
  + Redux Toolkit
  + OpenWeatherApi
 
+### Demo
+[Forecast Weather](https://weather-forecast-appl.netlify.app/)
 
 ### Project Installation
 
