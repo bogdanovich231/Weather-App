@@ -18,7 +18,7 @@ Weather Application was created as part of an educational project during a cours
 
 ### Project Installation
 
-#### Frontend (React Native)
+#### Frontend
 
 1.  Install the necessary dependencies using the command:
     `npm install`
