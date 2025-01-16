@@ -63,7 +63,7 @@ function SearchBar() {
       <div className={styles.wrapperSearchBar}>
         <input
           className={styles.inputSearch}
-          placeholder="Search city for weather"
+          placeholder="Search city"
           type="text"
           value={searchTerm}
           onChange={handleSearch}

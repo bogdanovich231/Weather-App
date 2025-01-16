@@ -5,9 +5,9 @@ function MainPage() {
   return (
     <div className={styles.containerMainPage}>
       <div className={styles.wrapperMainPage}>
-        <h1>Twój lokalny prognozator pogody</h1>
+        <h1>Check the weather in your city</h1>
         <div className={styles.wrapperSearchMainPage}>
-        <SearchBar />
+          <SearchBar />
         </div>
       </div>
     </div>

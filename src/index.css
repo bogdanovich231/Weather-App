@@ -41,3 +41,64 @@ button {
   border: none;
   background-color: transparent;
 }
+
+@media screen and (max-width: 1440px) {
+  p {
+    font-size: 17px;
+    margin: 0;
+  }
+  h1 {
+    font-size: 50px;
+    margin: 0;
+  }
+  h2 {
+    font-size: 33px;
+    margin: 0;
+  }
+  h3 {
+    font-size: 28px;
+    margin: 0;
+  }
+  h4 {
+    font-size: 18px;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  h1 {
+    font-size: 48px;
+    margin: 0;
+  }
+  h2 {
+    font-size: 31px;
+    margin: 0;
+  }
+  h3 {
+    font-size: 26px;
+    margin: 0;
+  }
+  h4 {
+    font-size: 16px;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  h1 {
+    font-size: 45px;
+    margin: 0;
+  }
+  h2 {
+    font-size: 28px;
+    margin: 0;
+  }
+  h3 {
+    font-size: 23px;
+    margin: 0;
+  }
+  h4 {
+    font-size: 15px;
+    margin: 0;
+  }
+}

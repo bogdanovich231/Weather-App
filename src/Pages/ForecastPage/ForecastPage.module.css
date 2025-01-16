@@ -1,11 +1,16 @@
 .containerForecastPage {
   display: flex;
 }
+
 .sidebar {
   position: fixed;
 }
+
 .content {
   margin-left: 150px;
   padding: 20px;
-  width: 70%;
+  width: 60%;
+}
+
+@media screen and (max-width: 1880px) {
 }
